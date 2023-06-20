@@ -1,0 +1,33 @@
+package com.mycompany.group234.model.jointable;
+
+import com.sap.olingo.jpa.metadata.core.edm.annotation.EdmIgnore;
+import lombok.Data;
+import javax.persistence.*;
+
+import com.mycompany.group234.model.Casting;
+import com.mycompany.group234.model.ProductionActualFilming;
+import com.mycompany.group234.model.ScoutingLocations;
+import com.mycompany.group234.model.CreatingBudget;
+import com.mycompany.group234.model.PreProduction;
+import com.mycompany.group234.model.ProducerRaiseFunds;
+import com.mycompany.group234.model.OrganisingLogistics;
+import com.mycompany.group234.model.Crew;
+
+@Entity(name = "PreProductionHiringCrew")
+@Table(schema = "\"generated_app\"", name = "\"PreProductionHiringCrew\"")
+@Data
+public class PreProductionHiringCrew{
+
+ 	@Id
+    @Column(name = "\"Id\"")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+	
+	@Column(name = "\"PreProductionID\"")
+	private Integer preProductionID;
+
+    
+    @Column(name = "\"CrewID\"")
+    private Integer crewID;
+ 
+}

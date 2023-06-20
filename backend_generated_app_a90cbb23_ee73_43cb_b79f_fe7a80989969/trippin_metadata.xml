@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="Model">
+            <EntityType HasStream="false" Name="Casting">
+                <Key>
+                    <PropertyRef Name="CastingID"/>
+                </Key>
+                <Property Name="CastingID" Type="Edm.Int32"/>
+                <Property Name="LeadMale" Type="Edm.String"/>
+                <Property Name="LeadFemale" Type="Edm.String"/>
+                <Property Name="LeadMaleDad" Type="Edm.String"/>
+                <Property Name="LeadMaleMom" Type="Edm.String"/>
+                <Property Name="LeadFemaleDad" Type="Edm.String"/>
+                <Property Name="LeadFemailMom" Type="Edm.String"/>
+                <Property Name="SupportCharacter1" Type="Edm.String"/>
+                <Property Name="SupportCharacter2" Type="Edm.String"/>
+                <Property Name="Comedian1" Type="Edm.String"/>
+                <Property Name="Comedian2" Type="Edm.String"/>
+                <Property Name="Villian" Type="Edm.String"/>
+                <Property Name="SpecialApperance" Type="Edm.String"/>
+                <Property Name="MobileNumber" Type="Edm.Int64"/>
+                <Property Name="Address" Type="Edm.String"/>
+                <Property Name="Compensation" Type="Edm.Int64"/>
+                <Property Name="Agreement" Type="Edm.String"/>
+                <Property Name="Dates" Type="Edm.Date"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="ProductionActualFilming">
+                <Key>
+                    <PropertyRef Name="FilmID"/>
+                </Key>
+                <Property Name="FilmID" Type="Edm.Int32"/>
+                <Property Name="SceneID" Type="Edm.String"/>
+                <Property Name="SceneSet" Type="Edm.String"/>
+                <Property Name="SceneLoc" Type="Edm.String"/>
+                <Property Name="SceneCasting" Type="Edm.String"/>
+                <Property Name="SceneScheduleDtTime" Type="Edm.Date"/>
+                <Property Name="CostumeDesigner" Type="Edm.Boolean"/>
+                <Property Name="HairStylistForLeads" Type="Edm.String"/>
+                <Property Name="MakeupArtistforLeadroles" Type="Edm.String"/>
+                <Property Name="MakeupArtistforActors" Type="Edm.String"/>
+                <Property Name="HairstylistForActors" Type="Edm.String"/>
+                <Property Name="Lightboy" Type="Edm.String"/>
+                <Property Name="ScreenScriptPg" Type="Edm.String"/>
+                <Property Name="RetakesCount" Type="Edm.String"/>
+                <Property Name="Dailoguehelper" Type="Edm.String"/>
+                <Property Name="FinalizedRetake" Type="Edm.String"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="ScoutingLocations">
+                <Key>
+                    <PropertyRef Name="ScoutLocID"/>
+                </Key>
+                <Property Name="ScoutLocID" Type="Edm.Int32"/>
+                <Property Name="ScriptAnalysisLocNotes" Type="Edm.String"/>
+                <Property Name="BrowseLocationDBslist" Type="Edm.String"/>
+                <Property Name="LocalAreaslist" Type="Edm.String"/>
+                <Property Name="AbroadCountryList" Type="Edm.String"/>
+                <Property Name="LocationslistLocal" Type="Edm.String"/>
+                <Property Name="LocationListAbroad" Type="Edm.String"/>
+                <Property Name="FilmShootCompatable" Type="Edm.Boolean"/>
+                <Property Name="LogisticsDetails" Type="Edm.String"/>
+                <Property Name="LocationPhotoswithNotes" Type="Edm.String"/>
+                <Property Name="FinalizedShootLocations" Type="Edm.String"/>
+                <Property Name="Permits" Type="Edm.String"/>
+                <Property Name="AgreementsWithPropOwner" Type="Edm.String"/>
+                <Property Name="FilmShootCompatablePermission" Type="Edm.String"/>
+                <Property Name="LocationCompatableNotes" Type="Edm.String"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="CreatingBudget">
+                <Key>
+                    <PropertyRef Name="BudgetID"/>
+                </Key>
+                <Property Name="BudgetID" Type="Edm.Int32"/>
+                <Property Name="Cast" Type="Edm.String"/>
+                <Property Name="Crew" Type="Edm.String"/>
+                <Property Name="Equipment" Type="Edm.String"/>
+                <Property Name="Location" Type="Edm.String"/>
+                <Property Name="PreProduction" Type="Edm.String"/>
+                <Property Name="Properties" Type="Edm.String"/>
+                <Property Name="Costumes" Type="Edm.String"/>
+                <Property Name="Stunts" Type="Edm.String"/>
+                <Property Name="Makeup" Type="Edm.String"/>
+                <Property Name="VFX" Type="Edm.String"/>
+                <Property Name="Permits" Type="Edm.String"/>
+                <Property Name="Rentalagreements" Type="Edm.String"/>
+                <Property Name="Insurance" Type="Edm.String"/>
+                <Property Name="ArtDesign" Type="Edm.String"/>
+                <Property Name="TotalExpectedBudget" Type="Edm.String"/>
+                <Property Name="Logistics" Type="Edm.String"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="PreProduction">
+                <Key>
+                    <PropertyRef Name="PreProductionID"/>
+                </Key>
+                <Property Name="FilmTitle" Type="Edm.String"/>
+                <Property Name="ProductionBanner" Type="Edm.String"/>
+                <Property Name="ProducerName" Type="Edm.String"/>
+                <Property Name="Director" Type="Edm.String"/>
+                <Property Name="ProductionManager" Type="Edm.String"/>
+                <Property Name="ProductionDesigner" Type="Edm.String"/>
+                <Property Name="AsstDirector" Type="Edm.String"/>
+                <Property Name="PreProductionID" Type="Edm.Int32"/>
+                <Property Name="ProductionAssitant" Type="Edm.String"/>
+                <NavigationProperty Name="CastingActors" Type="Collection(Model.Casting)"/>
+                <NavigationProperty Name="HiringCrew" Type="Collection(Model.Crew)"/>
+                <NavigationProperty Name="Locations" Type="Collection(Model.ScoutingLocations)"/>
+                <NavigationProperty Name="Budget" Type="Model.CreatingBudget"/>
+                <NavigationProperty Name="RaiseFunds" Type="Model.ProducerRaiseFunds"/>
+                <NavigationProperty Name="Filming" Type="Collection(Model.ProductionActualFilming)"/>
+                <NavigationProperty Name="Logistics" Type="Model.OrganisingLogistics"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="ProducerRaiseFunds">
+                <Key>
+                    <PropertyRef Name="FundsID"/>
+                </Key>
+                <Property Name="FundsID" Type="Edm.Int32"/>
+                <Property Name="Investors" Type="Edm.String"/>
+                <Property Name="ProductionCompanies" Type="Edm.String"/>
+                <Property Name="ProducerNames" Type="Edm.String"/>
+                <Property Name="GiftGrants" Type="Edm.String"/>
+                <Property Name="Crowdfunding" Type="Edm.String"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="OrganisingLogistics">
+                <Key>
+                    <PropertyRef Name="LogisticsID"/>
+                </Key>
+                <Property Name="LogisticsID" Type="Edm.Int32"/>
+                <Property Name="FinalizedShootLocations" Type="Edm.String"/>
+                <Property Name="ScoutlocationPermits" Type="Edm.String"/>
+                <Property Name="ScoutLocationLicense" Type="Edm.String"/>
+                <Property Name="ShootPermissionForEachLocation" Type="Edm.Boolean"/>
+                <Property Name="AccomodationAbroadHotel" Type="Edm.String"/>
+                <Property Name="Budgetforaccomodation" Type="Edm.String"/>
+                <Property Name="Airlines" Type="Edm.String"/>
+                <Property Name="Flight" Type="Edm.String"/>
+                <Property Name="Tickets" Type="Edm.String"/>
+                <Property Name="Abroadgroundtransportationvendor" Type="Edm.String"/>
+                <Property Name="Vehicletype" Type="Edm.String"/>
+                <Property Name="NoOfVehicles" Type="Edm.Int32"/>
+                <Property Name="BudgetforTransportation" Type="Edm.String"/>
+                <Property Name="Cateringtoteam" Type="Edm.String"/>
+                <Property Name="FoodBudget" Type="Edm.String"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="Crew">
+                <Key>
+                    <PropertyRef Name="CrewID"/>
+                </Key>
+                <Property Name="DirectorOfCinematography" Type="Edm.String"/>
+                <Property Name="CameraOperator1" Type="Edm.String"/>
+                <Property Name="CameraOperator2" Type="Edm.String"/>
+                <Property Name="Cameraboy1" Type="Edm.String"/>
+                <Property Name="Cameraboy2" Type="Edm.String"/>
+                <Property Name="Lightboy1" Type="Edm.String"/>
+                <Property Name="Lightboy2" Type="Edm.String"/>
+                <Property Name="Frameboy1" Type="Edm.String"/>
+                <Property Name="Frameboy2" Type="Edm.String"/>
+                <Property Name="ArtDirector" Type="Edm.String"/>
+                <Property Name="SetDecorator1" Type="Edm.String"/>
+                <Property Name="SetDecorator2" Type="Edm.String"/>
+                <Property Name="SetDecorator3" Type="Edm.String"/>
+                <Property Name="PropertyMaster1" Type="Edm.String"/>
+                <Property Name="PropertyMaster2" Type="Edm.String"/>
+                <Property Name="PropertyMaser3" Type="Edm.String"/>
+                <Property Name="CostumeDesigner1" Type="Edm.String"/>
+                <Property Name="CostumeDesigner2" Type="Edm.String"/>
+                <Property Name="CostumeDesigner3" Type="Edm.String"/>
+                <Property Name="WadrobeAssistant1" Type="Edm.String"/>
+                <Property Name="WadrobeAssitant2" Type="Edm.String"/>
+                <Property Name="MakeupArtistforLeadroles" Type="Edm.String"/>
+                <Property Name="MakeupArtistforActors" Type="Edm.String"/>
+                <Property Name="HairStylistsLeadRoles" Type="Edm.String"/>
+                <Property Name="HairStylistsActors" Type="Edm.String"/>
+                <Property Name="SoundMixer" Type="Edm.String"/>
+                <Property Name="BoomOperator" Type="Edm.String"/>
+                <Property Name="SoundRecordist1" Type="Edm.String"/>
+                <Property Name="SoundRecordist2" Type="Edm.String"/>
+                <Property Name="GripPerson1" Type="Edm.String"/>
+                <Property Name="GripPerson2" Type="Edm.String"/>
+                <Property Name="Electrician1" Type="Edm.String"/>
+                <Property Name="Editor1" Type="Edm.String"/>
+                <Property Name="Editor2" Type="Edm.String"/>
+                <Property Name="VFXBrand" Type="Edm.String"/>
+                <Property Name="VFXSupervisor" Type="Edm.String"/>
+                <Property Name="VFXTechnician1" Type="Edm.String"/>
+                <Property Name="VFXTechnician2" Type="Edm.String"/>
+                <Property Name="VFXArtist1" Type="Edm.String"/>
+                <Property Name="CrewID" Type="Edm.Int32"/>
+                <Property Name="MobileNumber" Type="Edm.Int64"/>
+                <Property Name="Address" Type="Edm.String"/>
+                <Property Name="Compensation" Type="Edm.Int64"/>
+                <Property Name="Agreement" Type="Edm.String"/>
+                <Property Name="Dates" Type="Edm.Date"/>
+            </EntityType>
+            <EntityContainer Name="Container">
+                <EntitySet Name="Castings" EntityType="Model.Casting"/>
+                <EntitySet Name="ProductionActualFilmings" EntityType="Model.ProductionActualFilming"/>
+                <EntitySet Name="ScoutingLocations" EntityType="Model.ScoutingLocations"/>
+                <EntitySet Name="CreatingBudgets" EntityType="Model.CreatingBudget"/>
+                <EntitySet Name="PreProductions" EntityType="Model.PreProduction">
+                    <NavigationPropertyBinding Path="CastingActors" Target="Castings"/>
+                    <NavigationPropertyBinding Path="HiringCrew" Target="Crews"/>
+                    <NavigationPropertyBinding Path="Locations" Target="ScoutingLocations"/>
+                    <NavigationPropertyBinding Path="Budget" Target="CreatingBudgets"/>
+                    <NavigationPropertyBinding Path="RaiseFunds" Target="ProducerRaiseFunds"/>
+                    <NavigationPropertyBinding Path="Filming" Target="ProductionActualFilmings"/>
+                    <NavigationPropertyBinding Path="Logistics" Target="OrganisingLogistics"/>
+                </EntitySet>
+                <EntitySet Name="ProducerRaiseFunds" EntityType="Model.ProducerRaiseFunds"/>
+                <EntitySet Name="OrganisingLogistics" EntityType="Model.OrganisingLogistics"/>
+                <EntitySet Name="Crews" EntityType="Model.Crew"/>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

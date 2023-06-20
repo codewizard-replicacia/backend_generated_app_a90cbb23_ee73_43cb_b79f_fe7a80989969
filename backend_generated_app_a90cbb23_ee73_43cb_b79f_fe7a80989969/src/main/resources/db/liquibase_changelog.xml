@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <property name="schemaName" value="generated_app"></property>
+    <property name="author=" value="db-designer"></property>
+    <changeSet id="v1-01-01" author="${author}">
+    
+ <createTable schemaName="${schemaName}" tableName="CreatingBudget">
+	<column name="BudgetID" type="SERIAL" autoIncrement="true" >
+        <constraints nullable="false" primaryKey="true"/>
+    </column>
+     <column name="Cast" type="VARCHAR(250)" />
+    
+     <column name="Crew" type="VARCHAR(250)" />
+    
+     <column name="Equipment" type="VARCHAR(250)" />
+    
+     <column name="Location" type="VARCHAR(250)" />
+    
+     <column name="PreProduction" type="VARCHAR(250)" />
+    
+     <column name="Properties" type="VARCHAR(250)" />
+    
+     <column name="Costumes" type="VARCHAR(250)" />
+    
+     <column name="Stunts" type="VARCHAR(250)" />
+    
+     <column name="Makeup" type="VARCHAR(250)" />
+    
+     <column name="VFX" type="VARCHAR(250)" />
+    
+     <column name="Permits" type="VARCHAR(250)" />
+    
+     <column name="Rentalagreements" type="VARCHAR(250)" />
+    
+     <column name="Insurance" type="VARCHAR(250)" />
+    
+     <column name="ArtDesign" type="VARCHAR(250)" />
+    
+     <column name="TotalExpectedBudget" type="VARCHAR(250)" />
+    
+     <column name="Logistics" type="VARCHAR(250)" />
+    
+ 	
+</createTable>
+ <createTable schemaName="${schemaName}" tableName="Casting">
+	<column name="CastingID" type="SERIAL" autoIncrement="true" >
+        <constraints nullable="false" primaryKey="true"/>
+    </column>
+     <column name="LeadMale" type="VARCHAR(250)" />
+    
+     <column name="LeadFemale" type="VARCHAR(250)" />
+    
+     <column name="LeadMaleDad" type="VARCHAR(250)" />
+    
+     <column name="LeadMaleMom" type="VARCHAR(250)" />
+    
+     <column name="LeadFemaleDad" type="VARCHAR(250)" />
+    
+     <column name="LeadFemailMom" type="VARCHAR(250)" />
+    
+     <column name="SupportCharacter1" type="VARCHAR(250)" />
+    
+     <column name="SupportCharacter2" type="VARCHAR(250)" />
+    
+     <column name="Comedian1" type="VARCHAR(250)" />
+    
+     <column name="Comedian2" type="VARCHAR(250)" />
+    
+     <column name="Villian" type="VARCHAR(250)" />
+    
+     <column name="SpecialApperance" type="VARCHAR(250)" />
+    
+     <column name="MobileNumber" type="BIGINT" />
+    
+     <column name="Address" type="VARCHAR(250)" />
+    
+     <column name="Compensation" type="BIGINT" />
+    
+     <column name="Agreement" type="VARCHAR(250)" />
+    
+     <column name="Dates" type="DATE" />
+    
+ 	
+</createTable>
+ <createTable schemaName="${schemaName}" tableName="Crew">
+    <column name="DirectorOfCinematography" type="VARCHAR(250)" />
+    
+     <column name="CameraOperator1" type="VARCHAR(250)" />
+    
+     <column name="CameraOperator2" type="VARCHAR(250)" />
+    
+     <column name="Cameraboy1" type="VARCHAR(250)" />
+    
+     <column name="Cameraboy2" type="VARCHAR(250)" />
+    
+     <column name="Lightboy1" type="VARCHAR(250)" />
+    
+     <column name="Lightboy2" type="VARCHAR(250)" />
+    
+     <column name="Frameboy1" type="VARCHAR(250)" />
+    
+     <column name="Frameboy2" type="VARCHAR(250)" />
+    
+     <column name="ArtDirector" type="VARCHAR(250)" />
+    
+     <column name="SetDecorator1" type="VARCHAR(250)" />
+    
+     <column name="SetDecorator2" type="VARCHAR(250)" />
+    
+     <column name="SetDecorator3" type="VARCHAR(250)" />
+    
+     <column name="PropertyMaster1" type="VARCHAR(250)" />
+    
+     <column name="PropertyMaster2" type="VARCHAR(250)" />
+    
+     <column name="PropertyMaser3" type="VARCHAR(250)" />
+    
+     <column name="CostumeDesigner1" type="VARCHAR(250)" />
+    
+     <column name="CostumeDesigner2" type="VARCHAR(250)" />
+    
+     <column name="CostumeDesigner3" type="VARCHAR(250)" />
+    
+     <column name="WadrobeAssistant1" type="VARCHAR(250)" />
+    
+     <column name="WadrobeAssitant2" type="VARCHAR(250)" />
+    
+     <column name="MakeupArtistforLeadroles" type="VARCHAR(250)" />
+    
+     <column name="MakeupArtistforActors" type="VARCHAR(250)" />
+    
+     <column name="HairStylistsLeadRoles" type="VARCHAR(250)" />
+    
+     <column name="HairStylistsActors" type="VARCHAR(250)" />
+    
+     <column name="SoundMixer" type="VARCHAR(250)" />
+    
+     <column name="BoomOperator" type="VARCHAR(250)" />
+    
+     <column name="SoundRecordist1" type="VARCHAR(250)" />
+    
+     <column name="SoundRecordist2" type="VARCHAR(250)" />
+    
+     <column name="GripPerson1" type="VARCHAR(250)" />
+    
+     <column name="GripPerson2" type="VARCHAR(250)" />
+    
+     <column name="Electrician1" type="VARCHAR(250)" />
+    
+     <column name="Editor1" type="VARCHAR(250)" />
+    
+     <column name="Editor2" type="VARCHAR(250)" />
+    
+     <column name="VFXBrand" type="VARCHAR(250)" />
+    
+     <column name="VFXSupervisor" type="VARCHAR(250)" />
+    
+     <column name="VFXTechnician1" type="VARCHAR(250)" />
+    
+     <column name="VFXTechnician2" type="VARCHAR(250)" />
+    
+     <column name="VFXArtist1" type="VARCHAR(250)" />
+    
+ 	<column name="CrewID" type="SERIAL" autoIncrement="true" >
+        <constraints nullable="false" primaryKey="true"/>
+    </column>
+     <column name="MobileNumber" type="BIGINT" />
+    
+     <column name="Address" type="VARCHAR(250)" />
+    
+     <column name="Compensation" type="BIGINT" />
+    
+     <column name="Agreement" type="VARCHAR(250)" />
+    
+     <column name="Dates" type="DATE" />
+    
+ 	
+</createTable>
+ <createTable schemaName="${schemaName}" tableName="OrganisingLogistics">
+	<column name="LogisticsID" type="SERIAL" autoIncrement="true" >
+        <constraints nullable="false" primaryKey="true"/>
+    </column>
+     <column name="FinalizedShootLocations" type="VARCHAR(250)" />
+    
+     <column name="ScoutlocationPermits" type="VARCHAR(250)" />
+    
+     <column name="ScoutLocationLicense" type="VARCHAR(250)" />
+    
+     <column name="ShootPermissionForEachLocation" type="BOOLEAN" />
+    
+     <column name="AccomodationAbroadHotel" type="VARCHAR(250)" />
+    
+     <column name="Budgetforaccomodation" type="VARCHAR(250)" />
+    
+     <column name="Airlines" type="VARCHAR(250)" />
+    
+     <column name="Flight" type="VARCHAR(250)" />
+    
+     <column name="Tickets" type="VARCHAR(250)" />
+    
+     <column name="Abroadgroundtransportationvendor" type="VARCHAR(250)" />
+    
+     <column name="Vehicletype" type="VARCHAR(250)" />
+    
+     <column name="NoOfVehicles" type="SERIAL" />
+    
+     <column name="BudgetforTransportation" type="VARCHAR(250)" />
+    
+     <column name="Cateringtoteam" type="VARCHAR(250)" />
+    
+     <column name="FoodBudget" type="VARCHAR(250)" />
+    
+ 	
+</createTable>
+ <createTable schemaName="${schemaName}" tableName="ScoutingLocations">
+	<column name="ScoutLocID" type="SERIAL" autoIncrement="true" >
+        <constraints nullable="false" primaryKey="true"/>
+    </column>
+     <column name="ScriptAnalysisLocNotes" type="VARCHAR(250)" />
+    
+     <column name="BrowseLocationDBslist" type="VARCHAR(250)" />
+    
+     <column name="LocalAreaslist" type="VARCHAR(250)" />
+    
+     <column name="AbroadCountryList" type="VARCHAR(250)" />
+    
+     <column name="LocationslistLocal" type="VARCHAR(250)" />
+    
+     <column name="LocationListAbroad" type="VARCHAR(250)" />
+    
+     <column name="FilmShootCompatable" type="BOOLEAN" />
+    
+     <column name="LogisticsDetails" type="VARCHAR(250)" />
+    
+     <column name="LocationPhotoswithNotes" type="VARCHAR(250)" />
+    
+     <column name="FinalizedShootLocations" type="VARCHAR(250)" />
+    
+     <column name="Permits" type="VARCHAR(250)" />
+    
+     <column name="AgreementsWithPropOwner" type="VARCHAR(250)" />
+    
+     <column name="FilmShootCompatablePermission" type="VARCHAR(250)" />
+    
+     <column name="LocationCompatableNotes" type="VARCHAR(250)" />
+    
+ 	
+</createTable>
+ <createTable schemaName="${schemaName}" tableName="ProducerRaiseFunds">
+	<column name="FundsID" type="SERIAL" autoIncrement="true" >
+        <constraints nullable="false" primaryKey="true"/>
+    </column>
+     <column name="Investors" type="VARCHAR(250)" />
+    
+     <column name="ProductionCompanies" type="VARCHAR(250)" />
+    
+     <column name="ProducerNames" type="VARCHAR(250)" />
+    
+     <column name="GiftGrants" type="VARCHAR(250)" />
+    
+     <column name="Crowdfunding" type="VARCHAR(250)" />
+    
+ 	
+</createTable>
+ <createTable schemaName="${schemaName}" tableName="PreProduction">
+    <column name="FilmTitle" type="VARCHAR(250)" />
+    
+     <column name="ProductionBanner" type="VARCHAR(250)" />
+    
+     <column name="ProducerName" type="VARCHAR(250)" />
+    
+     <column name="Director" type="VARCHAR(250)" />
+    
+     <column name="ProductionManager" type="VARCHAR(250)" />
+    
+     <column name="ProductionDesigner" type="VARCHAR(250)" />
+    
+     <column name="AsstDirector" type="VARCHAR(250)" />
+    
+ 	<column name="PreProductionID" type="SERIAL" autoIncrement="true" >
+        <constraints nullable="false" primaryKey="true"/>
+    </column>
+     <column name="ProductionAssitant" type="VARCHAR(250)" />
+    
+ 	
+</createTable>
+ <createTable schemaName="${schemaName}" tableName="ProductionActualFilming">
+	<column name="FilmID" type="SERIAL" autoIncrement="true" >
+        <constraints nullable="false" primaryKey="true"/>
+    </column>
+     <column name="SceneID" type="VARCHAR(250)" />
+    
+     <column name="SceneSet" type="VARCHAR(250)" />
+    
+     <column name="SceneLoc" type="VARCHAR(250)" />
+    
+     <column name="SceneCasting" type="VARCHAR(250)" />
+    
+     <column name="SceneScheduleDtTime" type="DATE" />
+    
+     <column name="CostumeDesigner" type="BOOLEAN" />
+    
+     <column name="HairStylistForLeads" type="VARCHAR(250)" />
+    
+     <column name="MakeupArtistforLeadroles" type="VARCHAR(250)" />
+    
+     <column name="MakeupArtistforActors" type="VARCHAR(250)" />
+    
+     <column name="HairstylistForActors" type="VARCHAR(250)" />
+    
+     <column name="Lightboy" type="VARCHAR(250)" />
+    
+     <column name="ScreenScriptPg" type="VARCHAR(250)" />
+    
+     <column name="RetakesCount" type="VARCHAR(250)" />
+    
+     <column name="Dailoguehelper" type="VARCHAR(250)" />
+    
+     <column name="FinalizedRetake" type="VARCHAR(250)" />
+    
+ 	
+</createTable>
+	
+  <createTable schemaName="${schemaName}" tableName="PreProductionHiringCrew">
+	<column name="Id" type="SERIAL" autoIncrement="true">
+		<constraints primaryKey="true" nullable="false"/>
+	</column>
+	<column name="PreProductionID" type="SERIAL" />
+	<column name="CrewID" type="SERIAL" />
+</createTable>
+  <createTable schemaName="${schemaName}" tableName="PreProductionCastingActors">
+	<column name="Id" type="SERIAL" autoIncrement="true">
+		<constraints primaryKey="true" nullable="false"/>
+	</column>
+	<column name="PreProductionID" type="SERIAL" />
+	<column name="CastingID" type="SERIAL" />
+</createTable>
+  <createTable schemaName="${schemaName}" tableName="PreProductionFilming">
+	<column name="Id" type="SERIAL" autoIncrement="true">
+		<constraints primaryKey="true" nullable="false"/>
+	</column>
+	<column name="PreProductionID" type="SERIAL" />
+	<column name="FilmID" type="SERIAL" />
+</createTable>
+  <createTable schemaName="${schemaName}" tableName="PreProductionLocations">
+	<column name="Id" type="SERIAL" autoIncrement="true">
+		<constraints primaryKey="true" nullable="false"/>
+	</column>
+	<column name="PreProductionID" type="SERIAL" />
+	<column name="ScoutLocID" type="SERIAL" />
+</createTable>
+
+ 	<addForeignKeyConstraint baseTableName="PreProductionHiringCrew" baseTableSchemaName="${schemaName}"  baseColumnNames="PreProductionID" constraintName="Crew_PreProductionID_fk"
+	                                  referencedTableName="PreProduction" referencedTableSchemaName="${schemaName}" referencedColumnNames="PreProductionID"/>
+	                                  
+	<addForeignKeyConstraint baseTableName="PreProductionHiringCrew" baseTableSchemaName="${schemaName}"  baseColumnNames="CrewID" constraintName="Crew_CrewID_fk"
+	                                  referencedTableName="Crew" referencedTableSchemaName="${schemaName}" referencedColumnNames="CrewID"/>
+ 
+ 	<addForeignKeyConstraint baseTableName="PreProductionCastingActors" baseTableSchemaName="${schemaName}"  baseColumnNames="PreProductionID" constraintName="Casting_PreProductionID_fk"
+	                                  referencedTableName="PreProduction" referencedTableSchemaName="${schemaName}" referencedColumnNames="PreProductionID"/>
+	                                  
+	<addForeignKeyConstraint baseTableName="PreProductionCastingActors" baseTableSchemaName="${schemaName}"  baseColumnNames="CastingID" constraintName="Casting_CastingID_fk"
+	                                  referencedTableName="Casting" referencedTableSchemaName="${schemaName}" referencedColumnNames="CastingID"/>
+ 
+ 	<addForeignKeyConstraint baseTableName="PreProductionFilming" baseTableSchemaName="${schemaName}"  baseColumnNames="PreProductionID" constraintName="ProductionActualFilming_PreProductionID_fk"
+	                                  referencedTableName="PreProduction" referencedTableSchemaName="${schemaName}" referencedColumnNames="PreProductionID"/>
+	                                  
+	<addForeignKeyConstraint baseTableName="PreProductionFilming" baseTableSchemaName="${schemaName}"  baseColumnNames="FilmID" constraintName="ProductionActualFilming_FilmID_fk"
+	                                  referencedTableName="ProductionActualFilming" referencedTableSchemaName="${schemaName}" referencedColumnNames="FilmID"/>
+ 
+ 	<addForeignKeyConstraint baseTableName="PreProductionLocations" baseTableSchemaName="${schemaName}"  baseColumnNames="PreProductionID" constraintName="ScoutingLocations_PreProductionID_fk"
+	                                  referencedTableName="PreProduction" referencedTableSchemaName="${schemaName}" referencedColumnNames="PreProductionID"/>
+	                                  
+	<addForeignKeyConstraint baseTableName="PreProductionLocations" baseTableSchemaName="${schemaName}"  baseColumnNames="ScoutLocID" constraintName="ScoutingLocations_ScoutLocID_fk"
+	                                  referencedTableName="ScoutingLocations" referencedTableSchemaName="${schemaName}" referencedColumnNames="ScoutLocID"/>
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 	<addColumn tableName="PreProduction" schemaName="${schemaName}">
+	    <column name="PreProductionBudget" type="SERIAL"/>
+	</addColumn>
+	<addForeignKeyConstraint baseTableName="PreProduction" baseColumnNames="PreProductionBudget" baseTableSchemaName="${schemaName}" constraintName="PreProduction_Budget_fk" referencedTableName="CreatingBudget"
+	                                 referencedColumnNames="BudgetID" referencedTableSchemaName="${schemaName}"/>
+ 
+	<addColumn tableName="PreProduction" schemaName="${schemaName}">
+	    <column name="PreProductionRaiseFunds" type="SERIAL"/>
+	</addColumn>
+	<addForeignKeyConstraint baseTableName="PreProduction" baseColumnNames="PreProductionRaiseFunds" baseTableSchemaName="${schemaName}" constraintName="PreProduction_RaiseFunds_fk" referencedTableName="ProducerRaiseFunds"
+	                                 referencedColumnNames="FundsID" referencedTableSchemaName="${schemaName}"/>
+ 
+	<addColumn tableName="PreProduction" schemaName="${schemaName}">
+	    <column name="PreProductionLogistics" type="SERIAL"/>
+	</addColumn>
+	<addForeignKeyConstraint baseTableName="PreProduction" baseColumnNames="PreProductionLogistics" baseTableSchemaName="${schemaName}" constraintName="PreProduction_Logistics_fk" referencedTableName="OrganisingLogistics"
+	                                 referencedColumnNames="LogisticsID" referencedTableSchemaName="${schemaName}"/>
+ 
+
+ 
+	    </changeSet>
+</databaseChangeLog>
